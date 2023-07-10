@@ -4,6 +4,12 @@ class persona
     public $nombre; // propiedades
     private $edad;
     protected $altura;
+
+    function __construct($nuevoNombre)
+    {
+        $this->nombre = $nuevoNombre;
+    }
+
     public function asignarNombre($nuevoNombre)
     {
         $this->nombre = $nuevoNombre;
@@ -19,10 +25,6 @@ class persona
     }
 }
 
-$objAlumno = new persona();
-$objAlumno->asignarNombre("Marcial");
+$objAlumno = new persona("Marcial");
+//$objAlumno->asignarNombre("Marcial");
 $objAlumno->imprimirNombre();
-
-$objAlumno2 = new persona();
-$objAlumno2->asignarNombre("Marixa");
-$objAlumno2->imprimirNombre();
